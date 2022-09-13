@@ -137,3 +137,45 @@ b'\x00\x00\x00\x00\x87\n+\n\x0c+79206223757\x12\x1b\n\x02\x08\x03\x1a\x00"\x03\x
   }
 }
 ```
+
+----
+----
+----
+----
+```http
+POST https://presence-grpc-noneu.truecaller.com/truecaller.presence.v1.Presence/SetPresence HTTP/2.0
+user-agent: truecaller-android/1242006 (grpc-java-okhttp) grpc-java-okhttp/1.37.0
+content-type: application/grpc
+te: trailers
+grpc-accept-encoding: gzip
+authorization: Bearer a2i0G--aTVqKek7-jBRabFPK204y-AHQnzt4BuuoGLmri6T87Dee-mEdT6V2_q2s
+grpc-timeout: 9999397u
+
+b'\x00\x00\x00\x00+\n\x02\x08\x01\x12\x04\x12\x02\x08\x06\x1a\r\n\x0bUSER_ACTION"\x002\x02\x10\x04B\x00J\x02\x10\x02Z\x00b\x02\x10\x01'
+```
+--- DECODED ---
+```
+1 {
+  1: 1
+}
+2 {
+  2 {
+    1: 6
+  }
+}
+3 {
+  1: "USER_ACTION"
+}
+4: ""
+6 {
+  2: 4
+}
+8: ""
+9 {
+  2: 2
+}
+11: ""
+12 {
+  2: 1
+}
+```
