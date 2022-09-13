@@ -31,3 +31,106 @@ alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
 
 b'\x00\x00\x00\x00\x00'
 ```
+
+-----
+
+```http
+POST https://presence-grpc-noneu.truecaller.com/truecaller.presence.v1.Presence/GetPresence HTTP/2.0
+user-agent: truecaller-android/1242006 (grpc-java-okhttp) grpc-java-okhttp/1.37.0
+content-type: application/grpc
+te: trailers
+grpc-accept-encoding: gzip
+authorization: Bearer a2i0G--aTVqKek7-jBRabFPK204y-AHQnzt4BuuoGLmri6T87Dee-mEdT6V2_q2s
+grpc-timeout: 9999538u
+
+b'\x00\x00\x00\x00*\n\x0c+79206223757\n\x0c+79242571442\n\x0c+79256370259'
+```
+--- DECODED ---
+```
+1: "+79206223757"
+1: "+79242571442"
+1: "+79256370259"
+```
+```http
+HTTP/2.0 200 
+content-type: application/grpc
+x-envoy-upstream-service-time: 13
+date: Fri, 09 Sep 2022 11:13:31 GMT
+server: istio-envoy
+via: 1.1 google
+alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+
+b'\x00\x00\x00\x00\x87\n+\n\x0c+79206223757\x12\x1b\n\x02\x08\x03\x1a\x00"\x03\x98\x06\x01*\x02\x08\x012\x00B\x02\x08\x01J\x00b\x02\x08\x01\n+\n\x0c+79242571442\x12\x1b\n\x02\x08\x03\x1a\x00"\x03\x98\x06\x01*\x02\x08\x012\x00B\x02\x08\x01J\x00b\x02\x08\x01\n+\n\x0c+79256370259\x12\x1b\n\x02\x08\x03\x1a\x00"\x03\x98\x06\x01*\x02\x08\x012\x00B\x02\x08\x01J\x00b\x02\x08\x01'
+```
+--- DECODED ---
+```
+1 {
+  1: "+79206223757"
+  2 {
+    1 {
+      1: 3
+    }
+    3: ""
+    4 {
+      99: 1
+    }
+    5 {
+      1: 1
+    }
+    6: ""
+    8 {
+      1: 1
+    }
+    9: ""
+    12 {
+      1: 1
+    }
+  }
+}
+1 {
+  1: "+79242571442"
+  2 {
+    1 {
+      1: 3
+    }
+    3: ""
+    4 {
+      99: 1
+    }
+    5 {
+      1: 1
+    }
+    6: ""
+    8 {
+      1: 1
+    }
+    9: ""
+    12 {
+      1: 1
+    }
+  }
+}
+1 {
+  1: "+79256370259"
+  2 {
+    1 {
+      1: 3
+    }
+    3: ""
+    4 {
+      99: 1
+    }
+    5 {
+      1: 1
+    }
+    6: ""
+    8 {
+      1: 1
+    }
+    9: ""
+    12 {
+      1: 1
+    }
+  }
+}
+```
