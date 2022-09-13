@@ -179,3 +179,14 @@ b'\x00\x00\x00\x00+\n\x02\x08\x01\x12\x04\x12\x02\x08\x06\x1a\r\n\x0bUSER_ACTION
   2: 1
 }
 ```
+```http
+HTTP/2.0 200 
+content-type: application/grpc
+x-envoy-upstream-service-time: 5
+date: Fri, 09 Sep 2022 11:13:29 GMT
+server: istio-envoy
+via: 1.1 google
+alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+
+b'\x00\x00\x00\x00\x00'
+```
